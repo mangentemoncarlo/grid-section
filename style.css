@@ -26,11 +26,18 @@
 }
 
 body {
+    max-width: 1440px;
+    min-height: 100vh;
     background-color: var(--light-grayish-blue);
     font-size: var(--font-size);
     font-family: var(--font-family);
-    margin: 1.5rem;
+    margin: 2rem 1.5rem;
     line-height: 1.2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1,
@@ -41,8 +48,11 @@ p {
 }
 
 .testimonials {
+    max-width: 1024px;
     display: grid;
     gap: 1.5rem;
+    justify-content: center;
+    align-content: center;
 }
 
 .card {
@@ -51,6 +61,7 @@ p {
     padding: 2rem;
     border-radius: 0.5rem;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 5px 15px 0px;
 }
 
 .card p {
@@ -91,6 +102,9 @@ p {
 .card--violet {
     background-color: var(--moderate-violet);
     color: var(--white);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right 1.5rem;
 }
 
 .card--grayish-blue {
@@ -115,4 +129,35 @@ footer {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr)
+    }
+
+    .card:nth-of-type(5) {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .card:nth-of-type(1) {
+        grid-column: 1 / span 2;
+    }
+
+    .card:nth-of-type(4) {
+        grid-column: 2 / span 2;
+    }
+
+    .card:nth-of-type(5) {
+        grid-column: 4;
+        grid-row: 1 / 3;
+    }
 }
