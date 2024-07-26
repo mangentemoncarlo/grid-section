@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+
+:root {
+    /* Colors  */
+
+    /* Primary */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Neutral */
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    --border-color: #A775F1;
+
+    /* Typography */
+
+    --font-size: 13px;
+    --font-family: "Barlow Semi Condensed", sans-serif;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
+
+body {
+    background-color: var(--light-grayish-blue);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    margin: 1.5rem;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.testimonials {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.card p {
+    color: var(--light-gray);
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card__user--name {
+    font-size: var(--font-size);
+    color: var(--light-grayish-blue);
+}
+
+.card__image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+}
+
+.card__text--bold {
+    font-weight: var(--font-semi-bold)
+}
+
+.card--white h3 {
+    color: black;
+}
+
+.card--white p {
+    color: black;
+    opacity: 70%;
+}
+
+.card--violet {
+    background-color: var(--moderate-violet);
+    color: var(--white);
+}
+
+.card--grayish-blue {
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--light-grayish-blue);
+}
+
+.card--blackish-blue {
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--light-grayish-blue);
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.card__ .attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
